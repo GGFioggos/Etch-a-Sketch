@@ -1,0 +1,21 @@
+body {
+    border: 1px solid purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paint-container {
+    margin-top: 200px;
+    border: 1px solid red;
+    display: grid;
+    height: 50vh;
+    width: 50vh;
+}
+
+.paint-box {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
