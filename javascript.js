@@ -19,3 +19,4 @@ for (let i = 1; i <= height; i++) {
 }
 
 const paintBoxes = document.querySelectorAll(".paint-box");
+console.log(paintBoxes);
