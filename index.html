@@ -9,9 +9,17 @@
     <title>Etch-a-Sketch</title>
   </head>
   <body>
-    <button onclick="changeGrid();">Number of Boxes</button>
-    <div class="paint-container">
-      <!--- ADD GRID FROM JS-->
+    <div class="header">Etch-a-Sketch!</div>
+    <div class="body">
+      <div class="settings">
+        <label for="colorpicker">Color Picker:</label>
+        <input type="color" id="colorpicker" value="#0000ff" />
+        <button onclick="changeGrid();">Number of Boxes</button>
+        <button onclick="eraseGrid();">Erase</button>
+      </div>
+      <div class="paint-container">
+        <!--- ADD GRID FROM JS-->
+      </div>
     </div>
   </body>
 </html>

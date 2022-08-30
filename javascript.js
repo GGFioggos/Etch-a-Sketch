@@ -4,20 +4,6 @@ const paintContainer = document.querySelector(".paint-container");
 
 createGrid(dimension);
 
-const paintBoxes = document.querySelectorAll(".paint-box");
-
-paintBoxes.forEach( function (paintbox){
-    paintbox.addEventListener('mouseover', function() {
-        if (!this.classList.contains("painted")){
-            this.classList.add("painted");
-            console.log("painted");
-        }
-    })
-})
-
-
-
-
 function changeGrid(){
     do {
         dimension = prompt("How many boxes do you want per row/column? (max 100)");
@@ -39,10 +25,30 @@ function createGrid(dimension){
             paintContainer.appendChild(div);
         }
     }
+
+    const paintBoxes = document.querySelectorAll(".paint-box");
+
+    paintBoxes.forEach( function (paintbox){
+        paintbox.addEventListener('mouseover', function() {
+            if (!this.classList.contains("painted")){
+                input = document.querySelector("#colorpicker");
+                console.log(input.value);
+                this.style.backgroundColor = input.value;
+            }
+        })
+    })
+
 }
 
 function deleteGrid(parent){
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
+}
+
+function eraseGrid(){
+    let paintBoxes = document.querySelectorAll(".paint-box");
+    paintBoxes.forEach(function(paintbox){
+        paintbox.classList.remove("painted");
+    })
 }
