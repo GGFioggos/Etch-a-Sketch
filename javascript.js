@@ -31,6 +31,7 @@ function createGrid(dimension){
     paintBoxes.forEach( function (paintbox){
         paintbox.addEventListener('mouseover', function() {
             if (!this.classList.contains("painted")){
+                this.classList.add("painted");
                 input = document.querySelector("#colorpicker");
                 console.log(input.value);
                 this.style.backgroundColor = input.value;
@@ -49,6 +50,6 @@ function deleteGrid(parent){
 function eraseGrid(){
     let paintBoxes = document.querySelectorAll(".paint-box");
     paintBoxes.forEach(function(paintbox){
-        paintbox.classList.remove("painted");
+        paintbox.style.backgroundColor = "white";
     })
 }
