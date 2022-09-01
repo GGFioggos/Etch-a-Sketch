@@ -52,4 +52,6 @@ function eraseGrid(){
     paintBoxes.forEach(function(paintbox){
         paintbox.style.backgroundColor = "white";
     })
+    deleteGrid(paintContainer);
+    createGrid(dimension);
 }
